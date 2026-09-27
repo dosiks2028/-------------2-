@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Task 2 - Component Library</title>
+  <link rel="stylesheet" href="task2.css">
+</head>
+<body>
+
+  <div class="library-container">
+
+    <!-- 1. Navigation Bar -->
+    <section class="component">
+      <header class="navbar">
+        <div class="logo">DevPortal</div>
+        <nav class="nav-links">
+          <a href="#">Overview</a>
+          <a href="#">Features</a>
+          <a href="#">Documentation</a>
+          <a href="#">Community</a>
+        </nav>
+        <div class="nav-buttons">
+          <button class="btn btn-secondary">Log In</button>
+          <button class="btn btn-primary">Sign Up</button>
+        </div>
+      </header>
+    </section>
+
+    <!-- 2. Row of Cards -->
+    <section class="component">
+      <div class="card-row">
+        <div class="card">
+          <h3>Basic Plan</h3>
+          <p>Short description of the basic functionality.</p>
+          <button class="btn btn-primary">Select Plan</button>
+        </div>
+        <div class="card">
+          <h3>Pro Plan</h3>
+          <p>A detailed description with extra text to test how card heights scale seamlessly together while keeping all buttons locked to the exact same bottom line.</p>
+          <button class="btn btn-primary">Select Plan</button>
+        </div>
+        <div class="card">
+          <h3>Enterprise</h3>
+          <p>Full access with customized integration features for large organizations.</p>
+          <button class="btn btn-primary">Select Plan</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. Pagination Bar -->
+    <section class="component">
+      <div class="pagination-bar">
+        <div class="pagination-center">
+          <button class="btn-page">&laquo;</button>
+          <a href="#" class="page-link active">1</a>
+          <a href="#" class="page-link">2</a>
+          <a href="#" class="page-link">3</a>
+          <button class="btn-page">&raquo;</button>
+        </div>
+        <div class="pagination-info">Showing 1-10 of 120 results</div>
+      </div>
+    </section>
+
+    <!-- 4. Comment Block -->
+    <section class="component">
+      <div class="comment-block">
+        <div class="avatar"></div>
+        <div class="comment-content">
+          <div class="comment-header">
+            <span class="author">Alexey Ivanov</span>
+            <span class="date">2 hours ago</span>
+          </div>
+          <p class="text">This comment demonstrates that regardless of how long the text is, it will strictly wrap beside the avatar and will never slide underneath it.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. Pricing Table -->
+    <section class="component">
+      <div class="pricing-table">
+        <div class="pricing-card">
+          <h3>Starter</h3>
+          <div class="price">$9<span>/mo</span></div>
+          <p>Standard features for individual users.</p>
+          <button class="btn btn-secondary">Choose Starter</button>
+        </div>
+        <div class="pricing-card recommended">
+          <div class="badge">Recommended</div>
+          <h3>Professional</h3>
+          <div class="price">$29<span>/mo</span></div>
+          <p>Advanced toolkit designed for professional developers and fast-growing teams.</p>
+          <button class="btn btn-primary">Choose Pro</button>
+        </div>
+        <div class="pricing-card">
+          <h3>Enterprise</h3>
+          <div class="price">$99<span>/mo</span></div>
+          <p>Custom security and dedicated 24/7 technical support.</p>
+          <button class="btn btn-secondary">Choose Enterprise</button>
+        </div>
+      </div>
+    </section>
+
+  </div>
+
+</body>
+</html>

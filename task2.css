@@ -1,0 +1,238 @@
+/* Единая палитра, шрифты и отступы */
+:root {
+  --primary: #2563eb;
+  --primary-hover: #1d4ed8;
+  --bg-main: #f8fafc;
+  --bg-card: #ffffff;
+  --text-dark: #0f172a;
+  --text-muted: #64748b;
+  --border-color: #cbd5e1;
+  --radius: 8px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: system-ui, -apple-system, sans-serif;
+}
+
+body {
+  background-color: var(--bg-main);
+  color: var(--text-dark);
+  padding: 2rem 1rem;
+}
+
+.library-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.btn {
+  padding: 0.6rem 1.2rem;
+  border-radius: var(--radius);
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.btn-primary {
+  background-color: var(--primary);
+  color: #fff;
+}
+
+.btn-secondary {
+  background-color: #e2e8f0;
+  color: var(--text-dark);
+}
+
+/* 1. Navigation Bar */
+.navbar {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 1rem 1.5rem;
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius);
+  flex-wrap: wrap;
+}
+
+.logo {
+  font-weight: 700;
+  font-size: 1.25rem;
+}
+
+.nav-links {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: var(--text-muted);
+}
+
+.nav-buttons {
+  margin-left: auto; /* Прижимает группу к правому краю */
+  display: flex;
+  gap: 0.5rem;
+}
+
+/* 2. Row of Cards */
+.card-row {
+  display: flex;
+  gap: 1.5rem;
+  align-items: stretch; /* Карточки одинаковой высоты */
+  flex-wrap: wrap;
+}
+
+.card {
+  flex: 1 1 240px;
+  display: flex;
+  flex-direction: column;
+  padding: 1.5rem;
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius);
+}
+
+.card p {
+  margin: 0.75rem 0 1.5rem 0;
+  color: var(--text-muted);
+}
+
+.card .btn {
+  margin-top: auto; /* Все кнопки на одной линии внизу */
+  align-self: flex-start;
+}
+
+/* 3. Pagination Bar */
+.pagination-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+  padding: 1rem;
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius);
+}
+
+.pagination-center {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin: 0 auto; /* Центрирует номера страниц */
+}
+
+.btn-page, .page-link {
+  padding: 0.4rem 0.8rem;
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  text-decoration: none;
+  color: var(--text-dark);
+  background: #fff;
+}
+
+.page-link.active {
+  background: var(--primary);
+  color: #fff;
+  border-color: var(--primary);
+}
+
+.pagination-info {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+}
+
+/* 4. Comment Block */
+.comment-block {
+  display: flex;
+  gap: 1rem;
+  padding: 1.25rem;
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius);
+}
+
+.avatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #94a3b8;
+  flex-shrink: 0; /* Аватар не сжимается и текст не заходит под него */
+}
+
+.comment-content {
+  flex: 1;
+}
+
+.comment-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+}
+
+.author {
+  font-weight: 600;
+}
+
+.date {
+  color: var(--text-muted);
+  font-size: 0.85rem;
+}
+
+.text {
+  color: var(--text-muted);
+  line-height: 1.5;
+}
+
+/* 5. Pricing Table */
+.pricing-table {
+  display: flex;
+  align-items: center; /* Центрирует, позволяя рекомендованному плану быть выше */
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.pricing-card {
+  flex: 1 1 220px;
+  display: flex;
+  flex-direction: column;
+  padding: 1.5rem;
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius);
+}
+
+.pricing-card.recommended {
+  padding: 2.5rem 1.5rem; /* Выше соседей за счет отступов, без фиксированной высоты */
+  border: 2px solid var(--primary);
+}
+
+.badge {
+  align-self: flex-start;
+  background: #dbeafe;
+  color: var(--primary);
+  padding: 0.2rem 0.6rem;
+  font-size: 0.75rem;
+  border-radius: 4px;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+.price {
+  font-size: 2rem;
+  font-weight: 700;
+  margin: 0.5rem 0;
+}
+
+.pricing-card .btn {
+  margin-top: auto;
+}
